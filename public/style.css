@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: #e8f1ff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    height: 85px;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b192b;
+    border-bottom: 1px solid #1c3552;
+}
+
+.header h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #8ea4bd;
+    font-size: 14px;
+}
+
+.status {
+    color: #35d07f;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.status span {
+    font-size: 18px;
+}
+
+
+/* MAIN */
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 85px);
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    padding: 20px;
+    background: #091625;
+    border-right: 1px solid #1c3552;
+}
+
+.panel {
+    background: #0d1e31;
+    border: 1px solid #1c3552;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+
+/* SERVER INFO */
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #193049;
+
+    font-size: 13px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: #8298b0;
+}
+
+.info-row strong {
+    color: #e8f1ff;
+    text-align: right;
+}
+
+
+/* SECURITY FLOW */
+
+.security-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 9px;
+
+    background: #10263d;
+    border-radius: 7px;
+}
+
+.security-step span {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #173a5e;
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.security-step p {
+    font-size: 12px;
+}
+
+.arrow {
+    text-align: center;
+    color: #4e779f;
+    padding: 4px;
+}
+
+
+/* CHAT AREA */
+
+.chat-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.chat-header {
+    padding: 20px 25px;
+
+    background: #0b192b;
+    border-bottom: 1px solid #1c3552;
+}
+
+.chat-header h2 {
+    font-size: 19px;
+}
+
+.chat-header p {
+    color: #8198b1;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* MESSAGES */
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 100px;
+    color: #6f879f;
+}
+
+.welcome-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.welcome-message h2 {
+    color: #b8c9da;
+    margin-bottom: 8px;
+}
+
+
+/* ENCRYPTED MESSAGE */
+
+.message {
+    max-width: 700px;
+    margin: 0 auto 18px;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background: #0d2034;
+    border: 1px solid #21415f;
+}
+
+.message strong {
+    display: block;
+    color: #55aaff;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.cipher-text {
+    background: #07111f;
+    border: 1px solid #1c3552;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    word-break: break-all;
+
+    font-family: Consolas, monospace;
+    font-size: 12px;
+
+    color: #9fc7eb;
+}
+
+.decrypt-button {
+    margin-top: 14px;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #176b4a;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.decrypt-button:hover {
+    background: #21885e;
+}
+
+.decrypted-text {
+    background: #102c25;
+
+    padding: 13px;
+
+    border-radius: 6px;
+
+    color: #63e6a1;
+
+    font-size: 15px;
+
+    word-break: break-word;
+}
+
+.message small {
+    display: block;
+    margin-top: 10px;
+    color: #62c992;
+}
+
+
+/* INPUT */
+
+.input-area {
+    display: flex;
+    gap: 10px;
+
+    padding: 18px 25px;
+
+    background: #0b192b;
+    border-top: 1px solid #1c3552;
+}
+
+.input-area input {
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    border: 1px solid #294967;
+
+    background: #07111f;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.input-area input:focus {
+    border-color: #3e81b8;
+}
+
+.input-area button {
+    padding: 0 24px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #176b4a;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background: #21885e;
+}
+
+
+/* ------------------------------------ */
+/* DELIVERY STATUS */
+/* ------------------------------------ */
+
+.delivery-status {
+    margin: 0 25px 18px;
+
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    background: #10263d;
+
+    border: 1px solid #21415f;
+
+    color: #8ea4bd;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+
+/* SENDING */
+
+.delivery-status.sending {
+    color: #ffd166;
+
+    background: #2c2612;
+
+    border-color: #63521c;
+}
+
+
+/* SENT */
+
+.delivery-status.sent {
+    color: #6eb7ff;
+
+    background: #10283e;
+
+    border-color: #28557a;
+}
+
+
+/* DELIVERED */
+
+.delivery-status.delivered {
+    color: #63e6a1;
+
+    background: #102c25;
+
+    border-color: #246b4e;
+
+    font-weight: bold;
+}
+
+
+/* FAILED */
+
+.delivery-status.failed {
+    color: #ff7777;
+
+    background: #35191d;
+
+    border-color: #743039;
+
+    font-weight: bold;
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #07111f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #28445f;
+    border-radius: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #1c3552;
+    }
+
+    .header {
+        padding: 0 18px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .input-area {
+        padding: 12px;
+    }
+
+    .delivery-status {
+        margin: 0 12px 12px;
+    }
+
+}
